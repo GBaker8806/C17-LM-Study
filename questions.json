@@ -11,14 +11,14 @@
     "category": "MQF Oct 2025",
     "question": "The APU starter oper ating limit is ________ and any APU starter engagement is considered a start attempt.",
     "answer": "1 minute",
-    "reference": "TO 1C-17A-1 [P ara. 5-34]"
+    "reference": "TO 1C-17A-1 [Para. 5-34]"
   },
   {
     "id": 3,
     "category": "MQF Oct 2025",
     "question": "When cycling a circuit breaker, pull the CB out, wait __________ or as indicated, then push the CB in.",
     "answer": "10 seconds",
-    "reference": "TO 1C-17A-1 [P ara. 3-30]"
+    "reference": "TO 1C-17A-1 [Para. 3-30]"
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@
     "category": "MQF Oct 2025",
     "question": "Without both air conditioning packs operating, the _________or ________________ must be open during operation of the cargo exhaust fans to ensure proper ventilation.",
     "answer": "Crew door/forward emergency escape door",
-    "reference": "TO 1C-17A-1 [P ara. 2- 1120 S10 (W)]"
+    "reference": "TO 1C-17A-1 [Para. 2- 1120 S10 (W)]"
   },
   {
     "id": 9,
@@ -102,7 +102,7 @@
     "category": "MQF Oct 2025",
     "question": "The EEBD is a -minute self -contained, disposable breathing unit. There are installed on the aircraft.",
     "answer": "15; 6",
-    "reference": "TO 1C -17A-1 [ Para. 1 -2658]"
+    "reference": "TO 1C -17A-1 [Para. 1 -2658]"
   },
   {
     "id": 16,
@@ -263,21 +263,21 @@
     "category": "MQF Oct 2025",
     "question": "If the prime mover is not assigned specifically for the intended unit and additional braking is not available, i.e., airbrakes, the prime mover total gross weight should be the unit to be loaded/offloaded.",
     "answer": "Greater  than",
-    "reference": "TO 1C -17A-1 [P ara. 2- 1120 S12]"
+    "reference": "TO 1C -17A-1 [Para. 2- 1120 S12]"
   },
   {
     "id": 39,
     "category": "MQF Oct 2025",
     "question": "A vehicle with a transmission that is not equipped with a neutral position shall be loaded/offloaded under its own power. When more than one layer of shoring is required, the shoring _________ prefabricated or joined together.",
     "answer": "Will be",
-    "reference": "TO 1C -17A-9 [P ara. 4B- 11 (C )]"
+    "reference": "TO 1C -17A-9 [Para. 4B- 11 (C )]"
   },
   {
     "id": 40,
     "category": "MQF Oct 2025",
     "question": "When using the struts to change the offload clearance hold the STAB STRUTS control handle to ___ until the struts stop lifting the aircraf t or there is no less than __ inch of chrome showing on the nose gear strut.",
     "answer": "EXT  / 1",
-    "reference": "TO 1C -17A-9 [ Para. 4B-19]"
+    "reference": "TO 1C -17A-9 [Para. 4B-19]"
   },
   {
     "id": 41,
@@ -298,7 +298,7 @@
     "category": "MQF Oct 2025",
     "question": "When us i ng the ramp as a lifting/lowering aid, the stabilizer struts shall be deployed when weight exceeds _______ pounds.",
     "answer": "10,355",
-    "reference": "TO 1C -17A-9 [ Para. 4B-11 (C)]"
+    "reference": "TO 1C -17A-9 [Para. 4B-11 (C)]"
   },
   {
     "id": 44,
@@ -2674,3 +2674,4 @@
     "reference": 
   }
 ]
+
