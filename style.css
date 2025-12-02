@@ -534,25 +534,25 @@ input[type="checkbox"] {
     font-size: 0.8rem;
     min-height: 40px;
   }
-  /* Desktop layout – two-column */
+/* Desktop layout – controls on left, card on right */
 @media (min-width: 1024px) {
   .app-main {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-wrap: wrap;          /* lets progress wrap onto next "row" */
     gap: 32px;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    padding-inline: 24px;
+    padding: 24px 24px 40px;
   }
 
-  .controls-card {
-    flex: 0 0 320px;   /* fixed-ish sidebar width */
+  .controls {
+    flex: 0 0 280px;          /* sidebar width */
   }
 
-  .study-column {
-    flex: 1 1 0;
-    max-width: 700px;  /* keeps card from getting too wide */
+  .card-area {
+    flex: 1 1 600px;
+    max-width: 720px;         /* keeps card from stretching too wide */
   }
 
   .card {
@@ -560,8 +560,11 @@ input[type="checkbox"] {
     margin-top: 0;
   }
 
-  .help-card,
-  .progress-card {
-    margin-top: 16px;
+  /* Progress row lines up under the card on desktop */
+  .progress {
+    flex: 1 1 600px;
+    max-width: 720px;
+    margin-left: auto;        /* aligns with card-area rather than full width */
+    margin-right: auto;
   }
 }
