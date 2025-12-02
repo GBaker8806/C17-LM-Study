@@ -949,7 +949,7 @@
     "category": "Airdrop",
     "question": "Whose responsibility is it to ensure airdrop kits contain enough equipment to satisfy load or mission requirements?",
     "answer": "Loadmaster",
-    "reference": 
+    "reference": ""
    },
   {
     "id": 136,
@@ -2681,6 +2681,7 @@
     "reference": "" 
   }
 ]
+
 
 
 
