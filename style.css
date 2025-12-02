@@ -520,6 +520,16 @@ input[type="checkbox"] {
     font-size: 1rem;
   }
 
+  .card.flag-open {
+  min-height: 360px; /* adjust until it looks good on desktop */
+  }
+  
+  @media (max-width: 768px) {
+    .card.flag-open {
+      min-height: 320px; /* a bit smaller on mobile if you want */
+    }
+  }
+
   /* Flag section: tighter and not dominating the card */
   .flag-row {
     margin-top: 6px;
