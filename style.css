@@ -396,3 +396,51 @@ input[type="checkbox"] {
   background: #080b0f;
   text-align: center;
 }
+
+.flag-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.flag-status {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.flag-status.flagged {
+  color: var(--danger);
+}
+
+.flag-panel {
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+}
+
+.flag-panel label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.flag-panel textarea {
+  width: 100%;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.flag-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+/* If you don't already have this */
+.hidden {
+  display: none !important;
+}
