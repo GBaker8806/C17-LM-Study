@@ -1304,8 +1304,8 @@
   {
     "id": 186,
     "category": "Airdrop",
-    "question": "The altitude wind restriction for a high altitude",
-    "answer": "personnel airdrop is none",
+    "question": "The altitude wind restriction for a high altitude personnel airdrop is?",
+    "answer": "none",
     "reference": "" 
   },
   {
@@ -1319,7 +1319,7 @@
     "id": 188,
     "category": "Airdrop",
     "question": "What size skidboard is not used for Container Delivery System airdrop on the C-17 aircraft?",
-    "answer": "48\" X",
+    "answer": "48" x 48"",
     "reference": "" 
   },
   {
@@ -1332,15 +1332,15 @@
   {
     "id": 190,
     "category": "Airdrop",
-    "question": "What is",
-    "answer": "the minimum suspended weight requirement for a CDS container501 pounds",
+    "question": "What is the minimum suspended weight requirement for a CDS container?",
+    "answer": "501 pounds",
     "reference": "" 
   },
   {
     "id": 191,
     "category": "Airdrop",
-    "question": "Van Zelm ratchets, wishbone \ufb01tting, nylon webbing Which of the following are the correct rigging materials needed to construct a forward restraint gate on the ramp for CDS?",
-    "answer": "",
+    "question": "Which of the following are the correct rigging materials needed to construct a forward restraint gate on the ramp for CDS?",
+    "answer": "Van Zelm ratchets, wishbone fitting, nylon webbing",
     "reference": "" 
   },
   {
@@ -2681,6 +2681,7 @@
     "reference": "" 
   }
 ]
+
 
 
 
