@@ -136,6 +136,7 @@ function exportFlags() {
 }
 async function submitFlagToServer(question, flagText) {
   if (!FLAG_API_URL) return;
+  if (!flagText.trim()) return;
 
   const payload = {
     questionId: question.id,
