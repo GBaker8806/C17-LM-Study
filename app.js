@@ -5,6 +5,22 @@
 // Update this string whenever you push a meaningful new build
 const APP_VERSION = "v1.2.0 - MQF Oct 2025 + Airdrop + Flags";
 
+// Backend endpoint for saving flags (Google Apps Script web app URL)
+const FLAG_API_URL = "https://script.google.com/macros/s/AKfycbydVE6oosUP8DwUX-cPVgBh_UXotKItZuNgji0OX84brvW2yYKE-nGEdb58qeHu_HHR2Q/exec";
+
+function getDeviceId() {
+  try {
+    let id = localStorage.getItem("c17_device_id");
+    if (!id) {
+      id = "dev-" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      localStorage.setItem("c17_device_id", id);
+    }
+    return id;
+  } catch {
+    return "unknown-device";
+  }
+}
+
 // Question data
 let allQuestions = [];
 let filteredQuestions = [];
@@ -117,6 +133,34 @@ function exportFlags() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+}
+async function submitFlagToServer(question, flagText) {
+  if (!FLAG_API_URL) return;
+
+  const payload = {
+    questionId: question.id,
+    question: question.question,
+    category: question.category,
+    answer: question.answer,
+    reference: question.reference || "",
+    flagText: flagText,
+    appVersion: APP_VERSION,
+    deviceId: getDeviceId(),
+    userAgent: navigator.userAgent || ""
+  };
+
+  try {
+    await fetch(FLAG_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+    // We silently succeed; no need to bother the user
+  } catch (err) {
+    console.warn("Failed to submit flag to server:", err);
+  }
 }
 
 // ===============================
@@ -241,6 +285,7 @@ function setupUI() {
       };
       saveFlags();
       updateFlagUI(q.id);
+      submitFlagToServer(q, text);
     });
   }
 
