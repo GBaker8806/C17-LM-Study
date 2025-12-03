@@ -134,9 +134,22 @@ function exportFlags() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+function getDeviceId() {
+  try {
+    let id = localStorage.getItem("c17_device_id");
+    if (!id) {
+      id = "dev-" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      localStorage.setItem("c17_device_id", id);
+    }
+    return id;
+  } catch {
+    return "unknown-device";
+  }
+}
+
 async function submitFlagToServer(question, flagText) {
   if (!FLAG_API_URL) return;
-  if (!flagText.trim()) return;
+  if (!flagText || !flagText.trim()) return;
 
   const payload = {
     questionId: question.id,
@@ -153,12 +166,14 @@ async function submitFlagToServer(question, flagText) {
   try {
     await fetch(FLAG_API_URL, {
       method: "POST",
+      // 👇 no-cors + simple content-type to avoid preflight/CORS headaches
+      mode: "no-cors",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "text/plain;charset=utf-8"
       },
       body: JSON.stringify(payload)
     });
-    // We silently succeed; no need to bother the user
+    // It's an opaque response in no-cors mode, but the request still reaches Apps Script.
   } catch (err) {
     console.warn("Failed to submit flag to server:", err);
   }
